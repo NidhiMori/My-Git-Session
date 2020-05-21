@@ -34,6 +34,12 @@
                     <li>{{order.billing_address.city}}, {{order.billing_address.state}} {{order.billing_address.zip}}</li>
                     <li>{{order.billing_address.country}}</li>
                     <li>&nbsp;</li>
+                    <li class="InvoiceComments">
+                        <div class="InvoiceHeading">{{lang 'invoice.comments'}}</div>
+                        <blockquote>
+                            {{order.comments}}
+                        </blockquote>
+                    </li>
                     <li>{{lang 'invoice.phone' number=order.billing_address.phone}}</li>
                     {{#if order.billing_address.email}}<li>{{lang 'invoice.email' email=order.billing_address.email}}</li>{{/if}}
                 </ul>
